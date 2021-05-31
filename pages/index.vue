@@ -2,16 +2,19 @@
   <div class="w-full">
     <Header />
     <Intro />
+    <Skills />
   </div>
 </template>
 
 <script>
 import Header from "~/components/Header";
 import Intro from "~/components/Intro";
+import Skills from "~/components/Skills";
 export default {
   components: {
     Header,
-    Intro
+    Intro,
+    Skills
   }
 };
 </script>
