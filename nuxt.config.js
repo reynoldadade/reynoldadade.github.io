@@ -19,6 +19,10 @@ export default {
         hid: "lottie",
         src:
           "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+      },
+      {
+        hid: "fontawesome",
+        src: "https://kit.fontawesome.com/9fc318d596.js"
       }
     ]
   },
