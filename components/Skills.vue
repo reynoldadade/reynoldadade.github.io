@@ -7,7 +7,7 @@
       <div
         v-for="skill in skills"
         :key="skill.name"
-        class="p-2 bg-gray-100 rounded shadow"
+        class="p-2 bg-gray-700 rounded shadow"
       >
         <div class="font-bold py-2">{{ skill.name }}</div>
         <div class="flex w-full text-sm font-semibold">
