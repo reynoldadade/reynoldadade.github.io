@@ -11,9 +11,9 @@
         </ul>
       </div>
       <div class="p-2 flex justify-around w-full">
-        <div v-for="social in socials" :key="social">
+        <a v-for="social in socials" :key="social" :href="social.url">
           <i :class="social.icon"></i>
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -24,10 +24,13 @@ export default {
   data() {
     return {
       socials: [
-        { icon: "fab fa-twitter fa-2x", url: "" },
-        { icon: "fab fa-linkedin", url: "" },
-        { icon: "fab fa-github", url: "" },
-        { icon: "fab fa-medium", url: "" }
+        { icon: "fab fa-twitter fa-2x", url: "https://twitter.com/nana_adade" },
+        {
+          icon: "fab fa-linkedin fa-2x",
+          url: "www.linkedin.com/in/reynold-osei-adade"
+        },
+        { icon: "fab fa-github fa-2x", url: "https://github.com/reynoldadade" },
+        { icon: "fab fa-medium fa-2x", url: "https://medium.com/@nana_adade" }
       ]
     };
   }
