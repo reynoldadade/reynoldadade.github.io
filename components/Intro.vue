@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full grid grid-cols-1 md:grid-cols-2">
+  <div class="w-full grid grid-cols-1 md:grid-cols-2" id="introduction">
     <div>
       <lottie-player
         src="https://assets6.lottiefiles.com/packages/lf20_5adtCi.json"
