@@ -3,18 +3,21 @@
     <Header />
     <Intro />
     <Skills />
+    <Projects />
   </div>
 </template>
 
 <script>
 import Header from "~/components/Header";
 import Intro from "~/components/Intro";
+import Projects from "~/components/projects";
 import Skills from "~/components/Skills";
 export default {
   components: {
     Header,
     Intro,
-    Skills
+    Skills,
+    Projects
   }
 };
 </script>

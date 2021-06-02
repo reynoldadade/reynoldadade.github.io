@@ -1,16 +1,16 @@
 <template>
-  <div class="w-full p-4 flex justify-center bg-gray-600">
+  <div class="w-full p-4 flex justify-center bg-gray-600 sticky top-0">
     <div class="w-full md:w-1/2 flex justify-between">
-      <a
+      <nuxt-link
         v-for="item in header"
         :key="item"
         class="uppercase font-semibold p-1 focus:outline-none"
         @click.prevent="selectItem(item)"
         :class="currentItem === item ? 'border-b-2 border-blue-300' : ''"
-        :href="'#' + item"
+        :to="{ path: '/', hash: `#${item}` }"
       >
         {{ item }}
-      </a>
+      </nuxt-link>
     </div>
   </div>
 </template>

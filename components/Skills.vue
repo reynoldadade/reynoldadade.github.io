@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full p-4" id="skills">
+  <div class="w-full p-4 h-screen" id="skills">
     <div class="text-center text-2xl px-2 py-8 uppercase font-bold">
       the skills
     </div>

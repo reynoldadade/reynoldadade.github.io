@@ -3,7 +3,7 @@ export default {
   ssr: false,
 
   // Target: https://go.nuxtjs.dev/config-target
-  target: "static",
+  // target: "static",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -34,7 +34,7 @@ export default {
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  // components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -45,20 +45,20 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    "@nuxtjs/axios",
+    "@nuxtjs/axios"
     // https://go.nuxtjs.dev/pwa
-    "@nuxtjs/pwa"
+    // "@nuxtjs/pwa"
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
-  pwa: {
-    manifest: {
-      lang: "en"
-    }
-  },
+  // pwa: {
+  //   manifest: {
+  //     lang: "en"
+  //   }
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}
