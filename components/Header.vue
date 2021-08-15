@@ -6,7 +6,7 @@
         :key="item"
         class="uppercase font-semibold p-1 focus:outline-none"
         @click.prevent="selectItem(item)"
-        :class="currentItem === item ? 'border-b-2 border-blue-300' : ''"
+        :class="`${currentHash}` === `#${item}` ? 'border-b-2 border-blue-300' : ''"
         :to="{ path: '/', hash: `#${item}` }"
       >
         {{ item }}
@@ -26,6 +26,10 @@ export default {
   methods: {
     selectItem(item) {
       this.currentItem = item;
+    }
+  }, computed: {
+    currentHash(){
+      return this.$route.hash
     }
   }
 };

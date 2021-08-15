@@ -27,7 +27,7 @@ export default {
     return {
       skills: [
         {
-          name: "Vue.js - Nuxt.js",
+          name: "Vue.js / Nuxt.js",
           years: 3,
           projects: 5
         },
