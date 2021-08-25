@@ -18,7 +18,7 @@
         <p>
           I'm detail-oriented and i specialise to building complex systems, i
           have been led in teams and i have led teams too, i have a knack for
-          getting up to dpeed pretty quickly, i have 5 year plus experience
+          getting up to speed pretty quickly, i have 5 year plus experience
           working in the financial and geospatial and geomapping industries. I
           strive to understand the technologies i use so if you want to build
           with me. Just send me an email
