@@ -5,11 +5,17 @@
     </div>
     <div class="h-full grid md:grid-cols-4 gap-4 grid-cols-1">
       <div
-        class="bg-white  shadow p-2 relative flex flex-col"
+        class="bg-white  shadow p-2 relative flex flex-col cursor-pointer hover:shadow-lg"
         v-for="project in projects"
         :key="project.id"
+        :id="`project-${project.id}`"
+        @click.prevent="skewCard(project.id)"
       >
-        <div class="absolute right-0 top-0 transform rotate-45 text-red-500">
+        <div
+          class="absolute right-0 top-0 transform rotate-45 text-red-500 z-50"
+          :id="`thumbtack-${project.id}`"
+          :key="`thumbtack-${project.id}`"
+        >
           <span><i class="fas fa-thumbtack"></i></span>
         </div>
         <div class="font-semibold p-1">
@@ -57,9 +63,30 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
 export default {
+  methods: {
+    skewCard(id) {
+      if (this.skewed) {
+        gsap.to(`#project-${id}`, {
+          duration: 0.3,
+          rotate: 0,
+          ease: "bounce"
+        });
+        this.skewed = false;
+      } else {
+        gsap.to(`#project-${id}`, {
+          duration: 0.3,
+          rotate: -5,
+          ease: "bounce"
+        });
+        this.skewed = true;
+      }
+    }
+  },
   data() {
     return {
+      skewed: false,
       projects: [
         {
           id: 1,
@@ -82,7 +109,7 @@ export default {
           ]
         },
         {
-          id: 1,
+          id: 2,
           name: "Secure",
           description: "Single Login application for all walulel products",
           githubLink: "",
@@ -92,7 +119,7 @@ export default {
         },
 
         {
-          id: 1,
+          id: 3,
           name: "Dalex GVIVE",
           description:
             "Allows verfication of passports, voters ID cards and ssnit, using an independent indentification check api",
@@ -102,7 +129,7 @@ export default {
           technologies: ["Angular", "firebase", "w3CSS"]
         },
         {
-          id: 2,
+          id: 4,
           name: "Dalex FILMS",
           description:
             "The Loan posting and disbursement app for Dalex Finance this software seeks to ease the need for face to face interaction of Compliance officers and clients looking for loans. Using E-Form it allows compliance to process loans under 3 hours for clients and takes away bias because all check are automated and passed by the system",
@@ -112,7 +139,7 @@ export default {
           technologies: ["AngularJS", "Bootstrap3", "w3CSS", "AwesomeFont"]
         },
         {
-          id: 3,
+          id: 5,
           name: "Dalex DP Portal",
           description:
             "To manage over 3000 sales personnel requires an app that just manages personnel. Built as an extension of FILMS it is designed to help Team Leaders manage and enroll new members of their teams and to manage team member transfers and promotions",
@@ -122,7 +149,7 @@ export default {
           technologies: ["Ionic"]
         },
         {
-          id: 4,
+          id: 6,
           name: "Dalex Recovery App",
           description:
             "What do you then do if loans given go bad. How do you track who has what loan and how do you provide the clients convenient ways to pay off their loans",
@@ -132,7 +159,7 @@ export default {
           technologies: ["Ionic"]
         },
         {
-          id: 5,
+          id: 7,
           name: "Dalex Eligibility App",
           description:
             "Built for Dalex Finance and hosted on a Linux Server built with Django, this is the main quality check system used to validate all clients that require loans, it removes all manual compliance tasks on loans",
