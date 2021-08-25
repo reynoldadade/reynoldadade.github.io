@@ -6,7 +6,7 @@
 
 <style>
 body {
-  color: white;
-  background-color: black;
+  color: black;
+  background-image: url("~/static/images/paper-white.jpg");
 }
 </style>

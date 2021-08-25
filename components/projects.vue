@@ -1,23 +1,54 @@
 <template>
-  <div class="h-screen p-4 w-full" id="projects">
+  <div class="p-4 h-full border-2 border-black m-2" id="projects">
     <div class="text-center text-2xl px-2 py-8 uppercase font-bold">
       Projects
     </div>
-    <div class="p-10">
+    <div class="h-full grid md:grid-cols-4 gap-4 grid-cols-1">
       <div
-        class="grid grid-cols-3 p-1 gap-6"
+        class="bg-white  shadow p-2 relative flex flex-col"
         v-for="project in projects"
         :key="project.id"
       >
-        <div class="col-span-1">
-          <img :src="project.image" alt="" srcset="" />
+        <div class="absolute right-0 top-0 transform rotate-45 text-red-500">
+          <span><i class="fas fa-thumbtack"></i></span>
         </div>
-        <div class="col-span-2">
+        <div class="font-semibold p-1">
+          <a
+            :href="project.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:underline"
+          >
+            {{ project.name }}</a
+          >
+        </div>
+        <div class="h-64 border-2 border-black">
+          <img :src="project.image" alt="" class="w-full h-full" />
+        </div>
+        <div class="flex flex-col justify-between flex-grow">
           <div>
-            {{ project.name }}
+            <div class="p-2 text-sm">
+              {{ project.description }}
+            </div>
+            <div class="w-full flex flex-wrap">
+              <div
+                v-for="(tech, index) in project.technologies"
+                :key="index"
+                class=" p-1 border-2 border-black m-1 font-semibold  text-xs "
+              >
+                {{ tech }}
+              </div>
+            </div>
           </div>
-          <div>
-            {{ project.description }}
+          <div class="p-2 text-sm font-bold">
+            <a
+              :href="project.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:underline p-2"
+            >
+              check it out <span><i class="fas fa-arrow-right"></i></span
+            ></a>
           </div>
         </div>
       </div>
@@ -32,12 +63,43 @@ export default {
       projects: [
         {
           id: 1,
+          name: "Wainsight",
+          description:
+            "WaInsight is Walulel’s Geospatial Intelligence Platform. The platform enables Residential Real Estate market participants to understand the quality of every neighbourhood, postcode or zip code.",
+          githubLink: "",
+          url: "https://wa-insight.com",
+          image: "/images/wainsight.png",
+          technologies: [
+            "Vue",
+            "Nuxt",
+            "TailwindCSS",
+            "MapboxGL.js",
+            "SweetAlert",
+            "Chart.js",
+            "HighCharts.js",
+            "Vuex",
+            "SyncfusionVue"
+          ]
+        },
+        {
+          id: 1,
+          name: "Secure",
+          description: "Single Login application for all walulel products",
+          githubLink: "",
+          url: "https://dalex-gvive.firebaseapp.com/",
+          image: "/images/wa-auth.png",
+          technologies: ["Vue", "Nuxt", "TailwindCSS", "SweetAlert"]
+        },
+
+        {
+          id: 1,
           name: "Dalex GVIVE",
-          description: "Allows verfication of passports, voters ID cards and ssnit, using an independent indentification check api",
+          description:
+            "Allows verfication of passports, voters ID cards and ssnit, using an independent indentification check api",
           githubLink: "",
           url: "https://dalex-gvive.firebaseapp.com/",
           image: "/images/project-1.png",
-          technologies: [
+          technologies: ["Angular", "firebase", "w3CSS"]
         },
         {
           id: 2,
@@ -46,7 +108,8 @@ export default {
             "The Loan posting and disbursement app for Dalex Finance this software seeks to ease the need for face to face interaction of Compliance officers and clients looking for loans. Using E-Form it allows compliance to process loans under 3 hours for clients and takes away bias because all check are automated and passed by the system",
           githubLink: "",
           url: "http://films.dalexhq.com/",
-          image: "/images/project-2.png"
+          image: "/images/project-2.png",
+          technologies: ["AngularJS", "Bootstrap3", "w3CSS", "AwesomeFont"]
         },
         {
           id: 3,
@@ -55,7 +118,8 @@ export default {
             "To manage over 3000 sales personnel requires an app that just manages personnel. Built as an extension of FILMS it is designed to help Team Leaders manage and enroll new members of their teams and to manage team member transfers and promotions",
           githubLink: "",
           url: "http://dpms.dalexhq.com/",
-          image: "/images/project-3.png"
+          image: "/images/project-3.png",
+          technologies: ["Ionic"]
         },
         {
           id: 4,
@@ -64,7 +128,8 @@ export default {
             "What do you then do if loans given go bad. How do you track who has what loan and how do you provide the clients convenient ways to pay off their loans",
           githubLink: "",
           url: "http://197.221.85.146:6767/filmspwa/login",
-          image: "/images/project-4.png"
+          image: "/images/project-4.png",
+          technologies: ["Ionic"]
         },
         {
           id: 5,
@@ -73,7 +138,8 @@ export default {
             "Built for Dalex Finance and hosted on a Linux Server built with Django, this is the main quality check system used to validate all clients that require loans, it removes all manual compliance tasks on loans",
           githubLink: "",
           url: "http://197.221.85.146/",
-          image: "/images/project-5.png"
+          image: "/images/project-5.png",
+          technologies: ["Django", "Bootstrap"]
         }
       ]
     };

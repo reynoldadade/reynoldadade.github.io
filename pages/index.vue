@@ -1,6 +1,5 @@
 <template>
   <div class="w-full">
-    <Header />
     <Intro />
     <Skills />
     <Projects />
