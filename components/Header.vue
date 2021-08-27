@@ -1,9 +1,23 @@
 <template>
-  <div class="border-2 border-black m-2 p-4">
-    <div class="text-center text-2xl px-2 py-8 uppercase font-bold">
+  <div class=" m-2 p-4 text-sm">
+    <div class="text-center text-5xl px-2 py-8 uppercase font-bold">
       Other interesting facts
     </div>
-    <div></div>
+    <div class="grid grid-cols-4 gap-6">
+      <div class="bg-white p-1 shadow ">
+        <p>
+          I am planning to build a unified healthcare management system, that
+          allows hospital to provide part or all their services to patients
+        </p>
+      </div>
+      <div class="bg-white p-1 shadow ">
+        <p>
+          I believe there is no joy in a job that does not challenge you,
+          because there isn't a single reward it can give if, since there aren't
+          anymore questions it can ask you?
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 

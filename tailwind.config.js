@@ -8,7 +8,11 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        "tempered-orange": "#C62368"
+      }
+    }
   },
   variants: {
     extend: {}

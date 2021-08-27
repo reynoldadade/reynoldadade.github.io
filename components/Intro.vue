@@ -1,10 +1,12 @@
 <template>
   <div class="w-full flex justify-center h-screen" id="introduction">
     <div
-      class="text-center flex flex-col items-center justify-center md:w-1/2 w-full m-2 border-black border-2"
+      class="text-center flex flex-col items-center justify-center md:w-1/2 w-full m-2"
     >
-      <div class="text-4xl uppercase font-semibold">Reynold Osei Adade</div>
-      <div class="py-4 px-8 font-bold ">
+      <div class="text-4xl uppercase font-semibold text-white ">
+        Reynold Osei Adade
+      </div>
+      <div class="py-4 px-8 font-bold text-white">
         <p>
           <span class="text-4xl">W</span>elcome. I'm Reynold -- a frontend
           designer and coder who creates for a living.
@@ -24,7 +26,7 @@
           with me. Just send me an email
         </p>
       </div>
-      <div class="p-2 flex justify-center w-full">
+      <div class="p-2 flex justify-center w-full text-white">
         <a
           v-for="social in socials"
           :key="social.name"

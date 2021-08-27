@@ -1,6 +1,6 @@
 <template>
-  <div class=" p-4 m-2 border-2 border-black" id="skills">
-    <div class="text-center text-5xl px-2 py-8 uppercase font-bold">
+  <div class=" p-4 m-2 " id="skills">
+    <div class="text-center text-5xl px-2 py-8 uppercase font-bold text-white">
       the skills
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4 py-4">

@@ -1,6 +1,6 @@
 <template>
-  <div class="p-4 h-full border-2 border-black m-2" id="projects">
-    <div class="text-center text-2xl px-2 py-8 uppercase font-bold">
+  <div class="p-4 h-full  m-2" id="projects">
+    <div class="text-center text-5xl px-2 py-8 uppercase font-bold text-white">
       Projects
     </div>
     <div class="h-full grid md:grid-cols-4 gap-4 grid-cols-1">
@@ -18,7 +18,7 @@
         >
           <span><i class="fas fa-thumbtack"></i></span>
         </div>
-        <div class="font-semibold p-1">
+        <div class="font-semibold p-1 ">
           <a
             :href="project.url"
             target="_blank"
