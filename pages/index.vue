@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <!-- <span class="absolute z-50" id="circle">
+    <!-- <span class="absolute" id="circle">
       <i
         class="fas fa-hand-point-right fa-2x transform rotate-45 text-red-500"
       ></i>
