@@ -13,8 +13,8 @@
       <div class="bg-white p-1 shadow ">
         <p>
           I believe there is no joy in a job that does not challenge you,
-          because there isn't a single reward it can give if, since there aren't
-          anymore questions it can ask you?
+          because there isn't a single reward it can give since there aren't
+          anymore questions it can ask you.
         </p>
       </div>
     </div>
