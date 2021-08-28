@@ -3,17 +3,17 @@
     <div
       class="text-center flex flex-col items-center justify-center md:w-1/2 w-full m-2"
     >
-      <div class="text-4xl uppercase font-semibold text-white ">
+      <div class="text-4xl uppercase font-semibold text-white " id="name_div">
         Reynold Osei Adade
       </div>
-      <div class="py-4 px-8 font-bold text-white">
+      <div class="py-4 px-8 font-bold text-white" id="tagline">
         <p>
           <span class="text-4xl">W</span>elcome. I'm Reynold -- a frontend
           designer and coder who creates for a living.
         </p>
         <p>I am a craftman, that is the best way to describe my skills</p>
       </div>
-      <div class="py-4 px-8 text-sm bg-white m-4 relative">
+      <div class="py-4 px-8 text-sm bg-white m-4 relative" id="message">
         <div class="absolute right-0 top-0 transform rotate-45 text-red-500">
           <span><i class="fas fa-thumbtack"></i></span>
         </div>
@@ -26,7 +26,7 @@
           with me. Just send me an email
         </p>
       </div>
-      <div class="p-2 flex justify-center w-full text-white">
+      <div class="p-2 flex justify-center w-full text-white" id="socials">
         <a
           v-for="social in socials"
           :key="social.name"
@@ -41,6 +41,8 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
+
 export default {
   data() {
     return {
@@ -62,6 +64,26 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    insertIntro() {
+      let tl = gsap.timeline();
+      tl.from("#name_div", {
+        duration: 1,
+        opacity: 0.2,
+        x: "100%",
+        ease: "bounce"
+      });
+      tl.from("#message", {
+        duration: 2,
+        ease: "steps",
+        opacity: 0,
+        scale: 0.2
+      });
+    }
+  },
+  mounted() {
+    this.insertIntro();
   }
 };
 </script>
