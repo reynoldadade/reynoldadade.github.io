@@ -5,7 +5,7 @@
     </div>
     <div class="h-full grid md:grid-cols-4 gap-4 grid-cols-1">
       <div
-        class="bg-white  shadow p-2 relative flex flex-col cursor-pointer hover:shadow-lg"
+        class="bg-white  shadow p-2 relative flex flex-col cursor-pointer hover:shadow-lg projectCard"
         v-for="project in projects"
         :key="project.id"
         :id="`project-${project.id}`"
@@ -64,6 +64,7 @@
 
 <script>
 import { gsap } from "gsap";
+
 export default {
   methods: {
     skewCard(id) {
@@ -84,6 +85,7 @@ export default {
       }
     }
   },
+  mounted() {},
   data() {
     return {
       skewed: false,

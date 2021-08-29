@@ -7,7 +7,7 @@
       <div
         v-for="skill in skills"
         :key="skill.name"
-        class="p-2 bg-white  shadow relative"
+        class="p-2 bg-white  shadow relative skillCard"
       >
         <div class="absolute right-0 top-0 transform rotate-45 text-red-500">
           <span><i class="fas fa-thumbtack"></i></span>

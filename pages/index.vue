@@ -18,6 +18,8 @@ import Intro from "~/components/Intro";
 import Projects from "~/components/projects";
 import Skills from "~/components/Skills";
 import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import Draggable from "gsap/Draggable";
 export default {
   components: {
     Header,
@@ -26,6 +28,9 @@ export default {
     Projects
   },
   mounted() {
+    gsap.registerPlugin(ScrollTrigger, Draggable);
+    this.bringCards();
+    this.dragCards();
     // document.addEventListener("mousemove", this.moveCircle);
   },
   methods: {
@@ -36,6 +41,30 @@ export default {
           left: e.pageX,
           top: e.pageY
         }
+      });
+    },
+    bringCards() {
+      gsap.from(".projectCard, .skillCard", {
+        opacity: 0.1,
+        duration: 2,
+        ease: "bounce",
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: "#projects, #skills",
+          toggleActions: "restart pause reverse pause",
+          // markers: true,
+          end: "bottom  50%+=100px",
+          // start: "top center",
+          scrub: 1
+        }
+      });
+    },
+    dragCards() {
+      Draggable.create(".projectCard", {
+        type: "x,y",
+        edgeResistance: 0.65,
+        bounds: "#projects",
+        inertia: true
       });
     }
   }
