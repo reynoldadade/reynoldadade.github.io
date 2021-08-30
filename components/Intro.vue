@@ -1,42 +1,31 @@
 <template>
-  <div class="w-full flex justify-center h-screen" id="introduction">
-    <div
-      class="text-center flex flex-col items-center justify-center md:w-1/2 w-full m-2"
-    >
-      <div class="text-4xl uppercase font-semibold text-white " id="name_div">
-        Reynold Osei Adade
-      </div>
-
-      <div class="py-4 px-8 font-bold text-white" id="tagline">
-        <p>
-          <span class="text-4xl">W</span>elcome. I'm Reynold -- a frontend
-          designer and coder who creates for a living.
-        </p>
-        <p>I am a craftman, that is the best way to describe my skills</p>
-      </div>
-      <div class="py-4 px-8 text-sm bg-white m-4 relative" id="message">
-        <div class="absolute right-0 top-0 transform rotate-45 text-red-500">
-          <span><i class="fas fa-thumbtack"></i></span>
-        </div>
-        <p>
-          I'm detail-oriented and i specialise to building complex systems, i
-          have been led in teams and i have led teams too, i have a knack for
-          getting up to speed pretty quickly, i have 5 year plus experience
-          working in the financial and geospatial and geomapping industries. I
-          strive to understand the technologies i use so if you want to build
-          with me. Just send me an email
-        </p>
-      </div>
-      <div class="p-2 flex justify-center w-full text-white" id="socials">
-        <a
-          v-for="social in socials"
-          :key="social.name"
-          :href="social.url"
-          class="m-2"
-        >
-          <i :class="social.icon"></i>
-        </a>
-      </div>
+  <div id="introduction" class="z-10 p-4">
+    <div class="text-white text-5xl uppercase font-bold headerLine">
+      <p>
+        Hi, there
+      </p>
+      <p class="p-1">
+        My name is <span id="name" class="p-2">Reynold Adade</span>
+      </p>
+    </div>
+    <div class="text-white w-1/2 text-sm p-2">
+      <p class="p-1">
+        Welcome, I hope i can show you some of the work I have done and
+        hopefully help you understand my journey, maybe along the way, the
+        little tricks i display here will convince you enough about my skill
+      </p>
+      <p class="p-1">
+        Started my journey in 2016, begun as an entry level compliance officer,
+        my job was to check for risks in loans, that job was so boring and
+        repeatitive i knew that there was something that could be done to save
+        me more time and have me do less work, therefore my journey begun with
+        python
+      </p>
+      <p class="p-1">
+        Since that day my love for code has never wavered and i have been lucky
+        enough to build some complex systems, I believe that journey has made me
+        who I am
+      </p>
     </div>
   </div>
 </template>
@@ -69,17 +58,34 @@ export default {
   methods: {
     insertIntro() {
       let tl = gsap.timeline();
-      tl.from("#name_div", {
+      tl.from(".headerLine", {
         duration: 1,
         opacity: 0.2,
         x: "100%",
         ease: "bounce"
-      }).from("#message", {
-        duration: 2,
-        ease: "steps",
-        opacity: 0,
-        scale: 0.2
-      });
+      })
+        .from("#message", {
+          duration: 2,
+          ease: "steps",
+          opacity: 0,
+          scale: 0.2
+        })
+        .to("#name", {
+          borderTop: 2,
+          duration: 0.7
+        })
+        .to("#name", {
+          borderRight: 2,
+          duration: 0.7
+        })
+        .to("#name", {
+          borderBottom: 2,
+          duration: 0.5
+        })
+        .to("#name", {
+          borderLeft: 2,
+          duration: 0.5
+        });
     }
   },
   mounted() {
