@@ -62,28 +62,7 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
-
 export default {
-  methods: {
-    skewCard(id) {
-      if (this.skewed) {
-        gsap.to(`#project-${id}`, {
-          duration: 0.3,
-          rotate: 0,
-          ease: "bounce"
-        });
-        this.skewed = false;
-      } else {
-        gsap.to(`#project-${id}`, {
-          duration: 0.3,
-          rotate: -5,
-          ease: "bounce"
-        });
-        this.skewed = true;
-      }
-    }
-  },
   mounted() {},
   data() {
     return {

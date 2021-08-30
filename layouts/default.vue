@@ -6,8 +6,9 @@
 
 <style>
 body {
-  background-image: url("~/static/layered-waves-haikei.svg");
+  background-color: black;
+  /* background-image: url("~/static/blob-haikei.svg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 </style>

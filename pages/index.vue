@@ -66,7 +66,7 @@ export default {
         scrollTrigger: {
           trigger: "#projects",
           toggleActions: "restart pause reverse pause",
-          markers: true,
+          // markers: true,
           end: "bottom  50%+=100px",
 
           // start: "top center",

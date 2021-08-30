@@ -1,6 +1,6 @@
 <template>
   <div class=" m-2 p-4 text-sm">
-    <div class="text-center text-5xl px-2 py-8 uppercase font-bold">
+    <div class="text-center text-5xl px-2 py-8 uppercase font-bold text-white">
       Other interesting facts
     </div>
     <div class="grid grid-cols-4 gap-6">
