@@ -6,6 +6,7 @@
       <div class="text-4xl uppercase font-semibold text-white " id="name_div">
         Reynold Osei Adade
       </div>
+
       <div class="py-4 px-8 font-bold text-white" id="tagline">
         <p>
           <span class="text-4xl">W</span>elcome. I'm Reynold -- a frontend
@@ -73,8 +74,7 @@ export default {
         opacity: 0.2,
         x: "100%",
         ease: "bounce"
-      });
-      tl.from("#message", {
+      }).from("#message", {
         duration: 2,
         ease: "steps",
         opacity: 0,

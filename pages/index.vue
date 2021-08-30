@@ -52,7 +52,7 @@ export default {
         scrollTrigger: {
           trigger: "#skills",
           toggleActions: "restart pause reverse pause",
-          markers: true,
+          // markers: true,
           end: "bottom  50%+=100px",
           // start: "top center",
           scrub: 1
