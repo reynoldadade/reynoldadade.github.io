@@ -44,16 +44,31 @@ export default {
       });
     },
     bringCards() {
-      gsap.from(".projectCard, .skillCard", {
+      gsap.from(".skillCard", {
         opacity: 0.1,
         duration: 2,
         ease: "bounce",
         stagger: 0.3,
         scrollTrigger: {
-          trigger: "#projects, #skills",
+          trigger: "#skills",
           toggleActions: "restart pause reverse pause",
-          // markers: true,
+          markers: true,
           end: "bottom  50%+=100px",
+          // start: "top center",
+          scrub: 1
+        }
+      });
+      gsap.from(".projectCard", {
+        opacity: 0.1,
+        duration: 2,
+        ease: "bounce",
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: "#projects",
+          toggleActions: "restart pause reverse pause",
+          markers: true,
+          end: "bottom  50%+=100px",
+
           // start: "top center",
           scrub: 1
         }

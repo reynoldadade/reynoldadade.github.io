@@ -9,7 +9,6 @@
         v-for="project in projects"
         :key="project.id"
         :id="`project-${project.id}`"
-        @click.prevent="skewCard(project.id)"
       >
         <div
           class="absolute right-0 top-0 transform rotate-45 text-red-500 z-50"
