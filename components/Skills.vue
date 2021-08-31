@@ -1,13 +1,13 @@
 <template>
-  <div class=" p-4 m-2 " id="skills">
-    <div class="text-center text-5xl px-2 py-8 uppercase font-bold text-white">
+  <div class=" p-4 m-2 text-white" id="skills">
+    <div class="text-center text-5xl px-2 py-8 uppercase font-bold">
       the skills
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4 py-4">
       <div
         v-for="skill in skills"
         :key="skill.name"
-        class="p-2 bg-white  shadow relative skillCard"
+        class="p-2  border-2 relative skillCard"
       >
         <div class="absolute right-0 top-0 transform rotate-45 text-red-500">
           <span><i class="fas fa-thumbtack"></i></span>
