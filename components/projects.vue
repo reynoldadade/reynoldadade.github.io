@@ -1,11 +1,11 @@
 <template>
-  <div class="p-4 h-full  m-2" id="projects">
-    <div class="text-center text-5xl px-2 py-8 uppercase font-bold text-white">
+  <div class="p-4 h-full text-white m-2" id="projects">
+    <div class="text-center text-5xl px-2 py-8 uppercase font-bold ">
       Projects
     </div>
     <div class="h-full grid md:grid-cols-4 gap-4 grid-cols-1">
       <div
-        class="bg-white  shadow p-2 relative flex flex-col cursor-pointer hover:shadow-lg projectCard"
+        class="border-2 p-2 relative flex flex-col cursor-pointer hover:shadow-lg projectCard"
         v-for="project in projects"
         :key="project.id"
         :id="`project-${project.id}`"
@@ -27,7 +27,7 @@
             {{ project.name }}</a
           >
         </div>
-        <div class="h-64 border-2 border-black">
+        <div class="h-64 border-2 border-white">
           <img :src="project.image" alt="" class="w-full h-full" />
         </div>
         <div class="flex flex-col justify-between flex-grow">
@@ -39,7 +39,7 @@
               <div
                 v-for="(tech, index) in project.technologies"
                 :key="index"
-                class=" p-1 border-2 border-black m-1 font-semibold  text-xs "
+                class=" p-1 border-2 border-white m-1 font-semibold  text-xs "
               >
                 {{ tech }}
               </div>
