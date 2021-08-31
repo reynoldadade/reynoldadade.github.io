@@ -44,19 +44,30 @@ export default {
       });
     },
     bringCards() {
-      gsap.from(".skillCard", {
+      const skillTL = gsap.timeline();
+
+      skillTL.from(".skillCard", {
         opacity: 0.1,
         duration: 2,
         ease: "bounce",
-        stagger: 0.3,
-        scrollTrigger: {
-          trigger: "#skills",
-          toggleActions: "restart pause reverse pause",
-          // markers: true,
-          end: "bottom  50%+=100px",
-          // start: "top center",
-          scrub: 1
-        }
+        stagger: 0.3
+        // scrollTrigger: {
+        //   trigger: "#skills",
+        //   toggleActions: "restart pause reverse pause",
+        //   // markers: true,
+        //   end: "bottom  50%+=100px",
+        //   // start: "top center",
+        //   scrub: 1
+        // }.to()
+      });
+
+      ScrollTrigger.create({
+        trigger: "#skills",
+        toggleActions: "restart pause reverse pause",
+        animation: skillTL, // markers: true,
+        end: "bottom  50%+=100px",
+        // start: "top center",
+        scrub: 1
       });
       gsap.from(".projectCard", {
         opacity: 0.1,
