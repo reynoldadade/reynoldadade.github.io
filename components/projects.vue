@@ -69,6 +69,16 @@ export default {
       skewed: false,
       projects: [
         {
+          id: 0,
+          name: "This site",
+          description:
+            "This very portfolio site, this is where i will mostly come experiment the new and interesting things i will come across",
+          githubLink: "https://github.com/reynoldadade/reynoldadade.github.io",
+          url: "reynoldadade@github.io",
+          image: "/images/thisProject.png",
+          technologies: ["Vue", "Tailwind", "Nuxt", "Gsap", "Plain Old CSS"]
+        },
+        {
           id: 1,
           name: "Wainsight",
           description:
