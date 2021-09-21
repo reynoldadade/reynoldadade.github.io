@@ -3,7 +3,7 @@
     <div class="text-center text-5xl px-2 py-8 uppercase font-bold ">
       Other interesting facts
     </div>
-    <div class="grid grid-cols-4 gap-6">
+    <div class="grid md:grid-cols-4 gap-6 grid-cols-1">
       <div class=" p-1 shadow text-white">
         <p>
           I am planning to build a unified healthcare management system, that

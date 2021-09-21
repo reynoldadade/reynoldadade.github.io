@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     moveCircle(e) {
-      gsap.to("#circle", {
+      return gsap.to("#circle", {
         duration: 0.3,
         css: {
           left: e.pageX,

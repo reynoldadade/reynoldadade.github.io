@@ -28,7 +28,12 @@
           >
         </div>
         <div class="h-64 border-2 border-white">
-          <img :src="project.image" alt="" class="w-full h-full" />
+          <nuxt-img
+            :src="project.image"
+            alt=""
+            class="w-full h-full"
+            quality="80"
+          ></nuxt-img>
         </div>
         <div class="flex flex-col justify-between flex-grow">
           <div>
@@ -68,6 +73,16 @@ export default {
     return {
       skewed: false,
       projects: [
+        {
+          id: 0,
+          name: "This site",
+          description:
+            "This very portfolio site, this is where i will mostly come experiment the new and interesting things i will come across",
+          githubLink: "https://github.com/reynoldadade/reynoldadade.github.io",
+          url: "reynoldadade@github.io",
+          image: "/images/thisProject.png",
+          technologies: ["Vue", "Tailwind", "Nuxt", "Gsap", "Plain Old CSS"]
+        },
         {
           id: 1,
           name: "Wainsight",
