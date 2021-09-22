@@ -33,6 +33,7 @@
             alt=""
             class="w-full h-full"
             quality="80"
+            provider="static"
           ></nuxt-img>
         </div>
         <div class="flex flex-col justify-between flex-grow">

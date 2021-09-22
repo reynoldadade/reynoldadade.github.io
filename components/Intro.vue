@@ -75,12 +75,7 @@ export default {
         x: "100%",
         ease: "bounce"
       })
-        .from("#message", {
-          duration: 2,
-          ease: "steps",
-          opacity: 0,
-          scale: 0.2
-        })
+
         .to("#name", {
           borderTop: 2,
           duration: 0.7
