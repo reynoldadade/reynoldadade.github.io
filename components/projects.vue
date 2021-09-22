@@ -28,13 +28,7 @@
           >
         </div>
         <div class="h-64 border-2 border-white">
-          <nuxt-img
-            :src="project.image"
-            alt=""
-            class="w-full h-full"
-            quality="80"
-            provider="static"
-          ></nuxt-img>
+          <img :src="project.image" alt="" class="w-full h-full" />
         </div>
         <div class="flex flex-col justify-between flex-grow">
           <div>
