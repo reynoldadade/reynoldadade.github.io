@@ -69,6 +69,17 @@ export default {
       skewed: false,
       projects: [
         {
+          id: 100,
+          name: "Folder Management",
+          description:
+            "Folder management designed as a proof of concept of adopting folder structure to accomodate endless placement of files",
+          githubLink: "https://github.com/reynoldadade/reo-assignment",
+          url:
+            "https://vercel.com/reynoldadade/reo-assignment/7g2WMuM83kG8aRzuJZzTxBbkFG9P",
+          image: "/images/project-p1.png",
+          technologies: ["Vue", "Tailwind", "Nuxt", "Ant Design"]
+        },
+        {
           id: 0,
           name: "This site",
           description:
