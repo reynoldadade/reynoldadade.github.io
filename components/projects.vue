@@ -70,14 +70,23 @@ export default {
       projects: [
         {
           id: 100,
-          name: "Folder Management",
+          name: "Endless Folders",
           description:
             "Folder management designed as a proof of concept of adopting folder structure to accomodate endless placement of files",
           githubLink: "https://github.com/reynoldadade/reo-assignment",
           url:
             "https://vercel.com/reynoldadade/reo-assignment/7g2WMuM83kG8aRzuJZzTxBbkFG9P",
           image: "/images/project-p1.png",
-          technologies: ["Vue", "Tailwind", "Nuxt", "Ant Design"]
+          technologies: ["Vue", "Tailwind", "Nuxt", "Ant Design", "axios"]
+        },
+        {
+          id: 101,
+          name: "URL Shortener",
+          description: "URL Shortener a prototype of the landing page",
+          githubLink: "https://github.com/reynoldadade/reo-assignment",
+          url: "https://url-shortener-topaz-chi.vercel.app/",
+          image: "/images/project-p2.png",
+          technologies: ["Vue", "Tailwind", "Nuxt", "Ant Design", "axios"]
         },
         {
           id: 0,
