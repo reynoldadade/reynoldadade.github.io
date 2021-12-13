@@ -45,15 +45,27 @@
               </div>
             </div>
           </div>
-          <div class="p-2 text-sm font-bold">
-            <a
-              :href="project.url"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:underline p-2"
-            >
-              check it out <span><i class="fas fa-arrow-right"></i></span
-            ></a>
+          <div class="flex justify-between">
+            <div class="p-2 text-sm font-bold">
+              <a
+                :href="project.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:underline p-2"
+              >
+                go to website <span><i class="fas fa-arrow-right"></i></span
+              ></a>
+            </div>
+            <div class="p-2 text-sm font-bold" v-if="project.githubLink">
+              <a
+                :href="project.githubLink"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-red-500 p-2"
+              >
+                <span><i class="fab fa-github"></i></span
+              ></a>
+            </div>
           </div>
         </div>
       </div>
@@ -74,19 +86,32 @@ export default {
           description:
             "Folder management designed as a proof of concept of adopting folder structure to accomodate endless placement of files",
           githubLink: "https://github.com/reynoldadade/reo-assignment",
-          url:
-            "https://vercel.com/reynoldadade/reo-assignment/7g2WMuM83kG8aRzuJZzTxBbkFG9P",
+          url: "https://reo-assignment-kiih2fsdr-reynoldadade.vercel.app/",
           image: "/images/project-p1.png",
-          technologies: ["Vue", "Tailwind", "Nuxt", "Ant Design", "axios"]
+          technologies: [
+            "Vue",
+            "Tailwind",
+            "Nuxt",
+            "Ant Design",
+            "axios",
+            "jest"
+          ]
         },
         {
           id: 101,
           name: "URL Shortener",
           description: "URL Shortener a prototype of the landing page",
-          githubLink: "https://github.com/reynoldadade/reo-assignment",
+          githubLink: "https://github.com/reynoldadade/shortly",
           url: "https://url-shortener-topaz-chi.vercel.app/",
           image: "/images/project-p2.png",
-          technologies: ["Vue", "Tailwind", "Nuxt", "Ant Design", "axios"]
+          technologies: [
+            "Vue",
+            "Tailwind",
+            "Nuxt",
+            "Ant Design",
+            "axios",
+            "jest"
+          ]
         },
         {
           id: 0,
