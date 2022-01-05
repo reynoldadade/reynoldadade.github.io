@@ -8,7 +8,9 @@
           <p>Adade</p>
           <div class="my-10 flex text-base">
             <div v-for="social in socials" :key="social.name" class="p-2">
-              <span><i :class="social.icon"></i></span>
+              <a :href="social.url" target="_blank"
+                ><i :class="social.icon"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -28,7 +30,11 @@
         }"
         class="w-1/2 mt-8"
       >
-        <h1 class="font-bold text-2xl">{{ about.title }}</h1>
+        <h1
+          class="font-bold text-2xl hover:text-3xl transition-all ease-in-out duration-300"
+        >
+          {{ about.title }}
+        </h1>
         <h6 class="text-sm p-1">{{ about.content }}</h6>
       </div>
     </div>
@@ -61,7 +67,7 @@ export default {
       socials: [
         {
           icon: "fab fa-linkedin fa-2x",
-          url: "https://www.linkedin.com/in/reynold-osei-adade",
+          url: "https://www.linkedin.com/in/radade",
           name: "linkedin"
         },
         {
