@@ -8,7 +8,7 @@
     <Intro />
     <Skills />
     <Projects />
-    <Header />
+    <!-- <Header /> -->
   </div>
 </template>
 

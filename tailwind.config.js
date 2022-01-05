@@ -10,8 +10,9 @@ module.exports = {
     extend: {
       colors: {
         babyPink: "#FFB5A7",
-        babyYellow: "#FEC89A",
-        lightPink: "#F8EDEB"
+        lightPink: "#fcd5ce",
+        almostPink: "#F8EDEB",
+        kindaOrange: "#f9dcc4"
       }
     }
   },

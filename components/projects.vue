@@ -1,5 +1,5 @@
 <template>
-  <div class="p-20 grid grid-cols-3 bg-lightPink" id="projects">
+  <div class="p-20 grid grid-cols-3 bg-almostPink" id="projects">
     <div class="text-6xl font-bold col-span-1 pt-20">
       Projects I have worked on
     </div>
@@ -87,7 +87,7 @@ export default {
           title: "Secure",
           content: "Single Login application for all walulel products",
           githubLink: "",
-          url: "https://dalex-gvive.firebaseapp.com/",
+          url: "https://secure.walulel.com",
           image: "/images/wa-auth.png",
           technologies: ["Vue", "Nuxt", "TailwindCSS", "SweetAlert"]
         },

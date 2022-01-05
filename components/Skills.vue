@@ -1,5 +1,5 @@
 <template>
-  <div class="p-20 bg-babyYellow grid grid-cols-3" id="skills">
+  <div class="p-20 bg-lightPink grid grid-cols-3" id="skills">
     <div class=" text-6xl font-bold col-span-1 pt-10">
       What i am good at
     </div>
