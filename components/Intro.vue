@@ -1,41 +1,35 @@
 <template>
-  <div id="introduction" class="z-10 p-4">
-    <div class="text-white text-5xl uppercase font-bold headerLine">
-      <p>
-        Hi, there
-      </p>
-      <p class="p-1">
-        My name is <span id="name" class="p-2">Reynold Adade</span>
-      </p>
-    </div>
-    <div class="flex flex-col md:flex-row">
-      <div class="text-white w-full md:w-1/2 text-sm p-2">
-        <p class="p-1">
-          Welcome, I hope i can show you some of the work I have done and
-          hopefully help you understand my journey, maybe along the way, the
-          little tricks i display here will convince you enough about my skill
-        </p>
-        <p class="p-1">
-          Started my journey in 2016, begun as an entry level compliance
-          officer, my job was to check for risks in loans, that job was so
-          boring and repeatitive i knew that there was something that could be
-          done to save me more time and have me do less work, therefore my
-          journey begun with python
-        </p>
-        <p class="p-1">
-          Since that day my love for code has never wavered and i have been
-          lucky enough to build some complex systems, I believe that journey has
-          made me who I am
-        </p>
-      </div>
-      <div class="flex md:flex-col flex-row justify-center">
-        <div
-          v-for="social in socials"
-          :key="social.name"
-          class="text-white m-2"
-        >
-          <span><i :class="social.icon"></i></span>
+  <div class="w-full h-screen bg-babyPink grid grid-cols-3 p-20">
+    <div class="col-span-1 ">
+      <div class="font-bold text-6xl flex justify-center">
+        <div>
+          <p>Reynold</p>
+          <p>Osei</p>
+          <p>Adade</p>
+          <div class="my-10 flex text-base">
+            <div v-for="social in socials" :key="social.name" class="p-2">
+              <span><i :class="social.icon"></i></span>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="flex w-full justify-center">
+        <img src="/images/profile.svg" alt="profile" />
+      </div>
+    </div>
+    <div class="col-span-2 px-10">
+      <div
+        v-for="(about, ndx) in abouts"
+        :key="about.title"
+        :class="{
+          'ml-12': ndx === 1,
+          'ml-24': ndx === 2
+        }"
+        class="w-1/2 mt-8"
+      >
+        <h1 class="font-bold text-2xl">{{ about.title }}</h1>
+        <h6 class="text-sm p-1">{{ about.content }}</h6>
       </div>
     </div>
   </div>
@@ -47,19 +41,36 @@ import { gsap } from "gsap";
 export default {
   data() {
     return {
+      abouts: [
+        {
+          title: "<Frontend Developer />",
+          content:
+            "Focusing on writing clean, effiencient and elegant code. Love for everything front end, let me build with you"
+        },
+        {
+          title: "<Designer />",
+          content:
+            "I love simple designs, let the content be the main character and everything else supports it"
+        },
+        {
+          title: "<Mentor />",
+          content:
+            "I love teaching and mentoring, it brings much joy to see the people you teach stand on their own and love programming just as you do"
+        }
+      ],
       socials: [
         {
-          icon: "fab fa-linkedin",
+          icon: "fab fa-linkedin fa-2x",
           url: "https://www.linkedin.com/in/reynold-osei-adade",
           name: "linkedin"
         },
         {
-          icon: "fab fa-github",
+          icon: "fab fa-github fa-2x",
           url: "https://github.com/reynoldadade",
           name: "github"
         },
         {
-          icon: "fab fa-medium",
+          icon: "fab fa-medium fa-2x",
           url: "https://medium.com/@nana_adade",
           name: "medium"
         }
@@ -95,7 +106,7 @@ export default {
     }
   },
   mounted() {
-    this.insertIntro();
+    // this.insertIntro();
   }
 };
 </script>

@@ -6,7 +6,7 @@
 
 <style>
 body {
-  background-color: black;
+  /* background-color: black; */
   /* background-image: url("~/static/blob-haikei.svg");
   background-size: cover;
   background-repeat: no-repeat; */
