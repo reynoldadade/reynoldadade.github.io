@@ -1,27 +1,16 @@
 <template>
-  <div class=" p-4 m-2 text-white" id="skills">
-    <div class="text-center text-5xl px-2 py-8 uppercase font-bold">
-      the skills
+  <div class="p-20 bg-lightPink grid grid-cols-3" id="skills">
+    <div class=" text-6xl font-bold col-span-1 pt-10">
+      What i am good at
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4 py-4">
-      <div
-        v-for="skill in skills"
-        :key="skill.name"
-        class="p-2  border-2 relative skillCard"
-      >
-        <div class="absolute right-0 top-0 transform rotate-45 text-red-500">
-          <span><i class="fas fa-thumbtack"></i></span>
-        </div>
-        <div class="font-bold py-2">{{ skill.name }}</div>
-        <div class="text-sm p-1">
-          {{ skill.description }}
-        </div>
-        <div class="flex w-full text-sm font-semibold">
-          <div>{{ skill.years }} <span class="text-gray-500">years</span></div>
-          <div class="px-2">
-            {{ skill.projects }} <span class="text-gray-500">projects</span>
-          </div>
-        </div>
+    <div class="col-span-2 p-10">
+      <div v-for="skill in skills" :key="skill.title" class="py-4">
+        <h1 class="font-bold text-4xl">
+          {{ skill.title }}
+        </h1>
+        <h6 class="text-sm">
+          {{ skill.content }}
+        </h6>
       </div>
     </div>
   </div>
@@ -33,60 +22,29 @@ export default {
     return {
       skills: [
         {
-          name: "Vue.js / Nuxt.js",
-          years: 3,
-          projects: 5,
-          description:
-            "The framework I have the strongest proficiency in by far, I can join a team that uses this stack from day 1 and i can contribute and make a difference almost immediately."
+          title: "Frontend with Vue and React",
+          content:
+            "I am primarily a frontend developer, i focus on user interfaces and animations to bring life to your product, my focus is always on code readabilty and proper documentation and maintenance"
         },
         {
-          name: "Python",
-          years: 2,
-          projects: 2,
-          description:
-            "if you need basic scripts written, from finding creative ways of doing your excel or making tons of api calls at once, i do have alittle bit of experience in that"
+          title: "Tailwind and Bootstrap",
+          content:
+            "I use these css tools to bring color and consistency whilst producing beautiful designs with a focus on simplicity"
         },
         {
-          name: "Mapbox.js",
-          years: 1,
-          projects: 2,
-          description:
-            "This is google maps slightly annnoying and inverted brother, I can build with this to any level of complexity"
+          title: "Headless UI and Gsap",
+          content:
+            "A partner to tailwind, headless ui allows for beautiful overlays and modals that will perform consistently every single time its evoked, Gsap however is my go to tool if i want to take animations one step higher"
         },
         {
-          name: "Tailwind",
-          years: 1,
-          projects: 2,
-          description:
-            "If you need to have a personal feel to your app for any reason, if you want to build without using javascript and alot of css, tailwind is the way to go and actually my personal favourite"
+          title: "Graphs with Chart.js, ApexCharts and Highcharts ",
+          content:
+            "I have worked on a lot of data heavy applications, to make sense out of large datasets its important to use chats to tell more than text can show"
         },
         {
-          name: "Bootstrap",
-          years: 5,
-          projects: 4,
-          description:
-            "My second choice in building for websites, I have experience in both its modern and legacy versions"
-        },
-        {
-          name: "Angular",
-          years: 4,
-          projects: 4,
-          description:
-            "The framework with the longest experience in, my second most proficient, i can build enterprise level apps with it using its cleana and contained components and my original love"
-        },
-        {
-          name: "React",
-          years: 2,
-          projects: 1,
-          description:
-            "Everyone loves react and i love it to, I have enough proficiency in this to easily insert myself into any project"
-        },
-        {
-          name: "Scrum",
-          years: 4,
-          projects: 5,
-          description:
-            "Agile methodologies are one of the most effienct ways of running projects, I have enough experience in scrum to lead teams that require scrum restructuring, I am a certified scrum master and i can also apply this knowlege to easily insert myself into scrum practicing teams"
+          title: "Maps with Mapbox and Google Maps",
+          content:
+            "I have also worked on a number of projects that require geospatial data and working maps, and these libraries are used to produce beautiful map layers"
         }
       ]
     };
