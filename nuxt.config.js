@@ -18,7 +18,7 @@ export default {
         content: "Reynold Adade's porfolio page"
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.svg" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     script: [
       {
         hid: "lottie",

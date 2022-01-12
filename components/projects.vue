@@ -12,6 +12,24 @@
             {{ tech }}
           </div>
         </h6>
+        <div class="flex ">
+          <a
+            class="border border-black p-2 rounded-sm hover:bg-babyPink mr-1"
+            v-if="project.githubLink"
+            target="_blank"
+            :href="project.githubLink"
+          >
+            View On Github <span><i class="fas fa-external-link-alt"></i></span>
+          </a>
+          <a
+            class="border border-black p-2 rounded-sm hover:bg-babyPink"
+            v-if="project.url"
+            target="_blank"
+            :href="project.url"
+          >
+            View Site <span><i class="fas fa-external-link-alt"></i></span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
