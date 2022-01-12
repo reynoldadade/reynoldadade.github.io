@@ -28,9 +28,9 @@ export default {
     Projects
   },
   mounted() {
-    gsap.registerPlugin(ScrollTrigger, Draggable);
-    this.bringCards();
-    this.dragCards();
+    // gsap.registerPlugin(ScrollTrigger, Draggable);
+    // this.bringCards();
+    // this.dragCards();
     // document.addEventListener("mousemove", this.moveCircle);
   },
   methods: {

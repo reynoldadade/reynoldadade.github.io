@@ -26,7 +26,8 @@
         :key="about.title"
         :class="{
           'ml-12': ndx === 1,
-          'ml-24': ndx === 2
+          'ml-24': ndx === 2,
+          'ml-36': ndx === 3
         }"
         class="w-1/2 mt-8"
       >
@@ -62,6 +63,11 @@ export default {
           title: "<Mentor />",
           content:
             "I love teaching and mentoring, it brings much joy to see the people you teach stand on their own and love programming just as you do"
+        },
+        {
+          title: "<Scrum Master />",
+          content:
+            "I used agile technoligies to ensure continuous delivery of products"
         }
       ],
       socials: [
@@ -83,34 +89,7 @@ export default {
       ]
     };
   },
-  methods: {
-    insertIntro() {
-      let tl = gsap.timeline();
-      tl.from(".headerLine", {
-        duration: 1,
-        opacity: 0.2,
-        x: "100%",
-        ease: "bounce"
-      })
-
-        .to("#name", {
-          borderTop: 2,
-          duration: 0.7
-        })
-        .to("#name", {
-          borderRight: 2,
-          duration: 0.7
-        })
-        .to("#name", {
-          borderBottom: 2,
-          duration: 0.5
-        })
-        .to("#name", {
-          borderLeft: 2,
-          duration: 0.5
-        });
-    }
-  },
+  methods: {},
   mounted() {
     // this.insertIntro();
   }

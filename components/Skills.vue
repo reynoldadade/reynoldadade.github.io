@@ -5,7 +5,9 @@
     </div>
     <div class="col-span-2 p-10">
       <div v-for="skill in skills" :key="skill.title" class="py-4">
-        <h1 class="font-bold text-4xl">
+        <h1
+          class="font-bold text-4xl hover:text-5xl transition-all duration-500 ease-in-out"
+        >
           {{ skill.title }}
         </h1>
         <h6 class="text-sm">
